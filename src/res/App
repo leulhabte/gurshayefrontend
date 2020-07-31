@@ -1,0 +1,30 @@
+import React from 'react';
+import './App.css';
+import axios from 'axios';
+
+function App() {
+  const [list, setList] = React.useState([]);
+
+  const callapi = ()=>{
+    axios.get('tips/posts/')
+    .then(res=>{
+      setList(res.data.data);
+    })
+  }
+
+  React.useEffect(()=>{
+    callapi();
+  },[])
+
+  return (
+    <div className="App">
+        <ul>
+          {list.map(data=>(
+           <li>{data.league}</li> 
+          ))}
+        </ul>
+    </div>
+  );
+}
+
+export default App;

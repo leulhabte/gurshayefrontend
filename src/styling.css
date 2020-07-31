@@ -1,0 +1,156 @@
+/* Sidebar */
+.Sidebar{
+    background-color: black;
+    height: 100vh;
+    width: 10rem;
+    position: fixed;
+    z-index: 1;
+}
+
+.Sidebar .Brand{
+    padding: 1rem;
+    color: white;
+}
+
+.Sidebar .Navigations{
+    padding: 1rem
+}
+
+.Sidebar .Items{
+    padding: 0.99rem 0;
+}
+
+.Sidebar .Links{
+    color: white;
+    transition: ease-in-out 0.2s;
+}
+
+.Sidebar .Links span{
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.Sidebar .Links span:hover{
+    margin-left: 0.5rem;
+    transition: ease-in-out 0.3s;
+}
+
+.Sidebar .Links:hover{
+    border-left: tomato 2px solid;
+    text-decoration: none;
+}
+
+/* Navbar */
+.Navbar{
+    background-color: white;
+    box-shadow: 5px 5px 8px rgb(165, 165, 165);
+}
+
+.Navbar .Link{
+    color: black;
+    margin: 0.5rem 2rem;
+    font-weight: 400;
+    font-size: 18px;
+    transition: ease-in-out 0.2s;
+}
+
+.Navbar .Link:hover{
+    border-bottom: tomato 2px solid;
+    text-decoration: none;
+}
+
+@media(max-width: 768px){
+
+    .MainContainer{
+        flex-direction: column-reverse !important;
+    }
+
+    .Navbar{
+        box-shadow: none;        
+    }
+
+    .Sidebar{
+        width: 100vw;
+        height: 5rem;
+        z-index: 0;
+        position: relative;
+    }
+
+    .Sidebar .Brand{
+        display: none;
+    }
+
+    .Navbar .BrandName{
+        display: inline !important;
+    }
+
+    .Sidebar .Items{
+        padding: 0.6rem;
+    }
+
+    .Sidebar .Navigations{
+        display: flex;
+        justify-content: center;
+    }
+
+    .Sidebar .Navigations .Navs{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .Sidebar .Links:hover{
+        border-left: none;
+        border-bottom: tomato 2px solid;
+    }
+}
+
+.Main-body{
+    margin: 2rem 2rem 2rem 11rem;
+}
+
+@media(max-width:768px){
+    .Main-body{
+        margin: 2rem;
+    }
+}
+
+/* AddTips */
+
+.Main{
+    margin: 3rem 0 0 5rem;
+}
+
+.Main .Heading{
+    border-left: tomato 4px solid; 
+}
+
+.Main .Heading h2{
+    margin-left: 1rem;
+    font-weight: 400;
+}
+
+@media(max-width:768px){
+    .Main{
+        margin: 3rem 0 0 1rem;
+    } 
+}
+
+.Form option{
+    font-size: 15px;
+}
+
+.btn{
+    border-radius: 0px;
+}
+
+.Form .btn{
+    background-color: rgb(32, 26, 26);
+    font-size: 18px;
+}
+
+/* Loading */
+
+.Loading{
+    display: flex;
+    justify-content: center;
+}
